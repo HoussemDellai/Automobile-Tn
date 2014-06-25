@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{aa1f720b-57de-49d3-9622-76a4652c3ec4}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9a9149f1-e5e7-4ac9-8268-e61f0d585b0f</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AutomobileTn</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\ViewModelsFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CarsCollectionToStringCollectionConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\GroupCarsToListCarsConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\IntToPriceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ListToSubListConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ListViewSelectedItemToCarConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\PriceTMarginPriceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\RelativeDateTimeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringToImageUrlConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Lib\RelayCommandGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Car.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GroupCars.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Video.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\FavoritCarsRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SecondaryTilesService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TweetsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\VideosService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\CarsFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\VideoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\VideoPlayerPage.xaml.cs">
+      <DependentUpon>VideoPlayerPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\automobile-logo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Alfa Romeo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Audi.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\BMW.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Chevrolet.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Citroën.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Dacia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Fiat.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Ford.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Hyundai.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Jaguar.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\KIA.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Lancia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Land Rover.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Mahindra.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Mazda.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Mercedes.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Mini.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Mitsubishi.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Nissan.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Opel.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Peugeot.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Renault.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Seat.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Ssangyong.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Toyota.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Volkswagen.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\CarsManifacturers\Volvo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\basecircle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\next.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Icons\play.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\LightIcons\basecircle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\LightIcons\next.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\LightIcons\transport.play.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\pattern-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\VideoPlayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)UserControls\" />
+  </ItemGroup>
+</Project>

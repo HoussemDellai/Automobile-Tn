@@ -1,0 +1,19 @@
+﻿<Application x:Class="AutomobileTn.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:AutomobileTn"
+             xmlns:Utils="using:AutomobileTn.Utils"
+             xmlns:Configurations="using:AutomobileTn.Configuration"
+             xmlns:ViewModels="using:AutomobileTn.ViewModels">
+
+    <Application.Resources>
+
+        <Configurations:ViewModelsFactory x:Key="Factory"/>
+
+        <!--<ViewModels:MainViewModel x:Key="MainViewModel" />-->
+
+        <Utils:Constants x:Key="Constants" />
+
+    </Application.Resources>
+
+</Application>

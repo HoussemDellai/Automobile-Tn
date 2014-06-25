@@ -1,0 +1,704 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:Converters="using:AutomobileTn.Converters"
+      xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:Media="using:Microsoft.Xaml.Interactions.Media"
+      x:Class="AutomobileTn.MainPage"
+      mc:Ignorable="d"
+      RequestedTheme="Dark">
+
+    <Page.Resources>
+
+        <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        <Converters:CarsCollectionToStringCollectionConverter x:Key="CarsCollectionToStringCollectionConverter" />
+        <Converters:IntToPriceConverter x:Key="IntToPriceConverter" />
+        <Converters:StringToImageUrlConverter x:Key="StringToImageUrlConverter" />
+
+        <Storyboard x:Name="ShowUpStoryboard">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="-200" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0.0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+        <Storyboard x:Name="ShowDownStoryboard">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="200">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="AddCarToFavoritDialog">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="ShowUpRemoveDialogStoryboard">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="-200" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0.0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+        <Storyboard x:Name="ShowDownRemoveDialogStoryboard">
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="200">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6"
+                                      Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut" />
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="RemoveCarFromFavoritDialog">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <DataTemplate x:Key="MainCarDataTemplate">
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,6"
+                        Width="341">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Tapped">
+
+                        <Core:InvokeCommandAction Command="{Binding MainViewModel.SelectSelectedCarCommand, Mode=OneWay, Source={StaticResource Factory}}"
+                                                  CommandParameter="{Binding Mode=OneWay}" />
+
+                        <Media:ControlStoryboardAction ControlStoryboardOption="Play"
+                                                       Storyboard="{Binding ElementName=ShowUpStoryboard}" />
+
+                    </Core:EventTriggerBehavior>
+
+                </Interactivity:Interaction.Behaviors>
+                <Image Source="{Binding ImageUrl}"
+                       Height="84"
+                       Width="160"
+                       Stretch="UniformToFill" />
+                <StackPanel Width="185"
+                            Background="DarkGray"
+                            Orientation="Horizontal">
+
+                    <Grid Background="White"
+                          Height="12"
+                          Width="12"
+                          Margin="-6,18"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                          RenderTransformOrigin="0.5,0.5">
+                        <Grid.RenderTransform>
+                            <CompositeTransform Rotation="-45" />
+                        </Grid.RenderTransform>
+                    </Grid>
+
+                    <StackPanel Margin="12,0,0,0">
+                        <TextBlock Text="{Binding Model}"
+                                   FontFamily="Segoe UI Black"
+                                   FontSize="24"
+                                   Margin="0,12,12,0"
+                                   Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Text="{Binding Price, Converter={StaticResource IntToPriceConverter}}"
+                                   FontFamily="Segoe UI"
+                                   FontSize="20"
+                                   Margin="0,0"
+                                   Opacity="0.5"
+                                   Foreground="Black" />
+
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Page.DataContext>
+        <Binding Path="MainViewModel"
+                 Source="{StaticResource Factory}" />
+    </Page.DataContext>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Refresh"
+                          Label="rafraichir"
+                          Command="{Binding RefreshCommand}" />
+            <AppBarButton Label="rechercher"
+                          Click="SearchAppBarButton_Click"
+                          Icon="Find" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:Name="RootLayout">
+
+        <Hub x:Name="MainHub"
+             Padding="0,96,0,0"
+             Margin="0,27,0,0">
+
+            <Hub.Resources>
+                <DataTemplate x:Key="HubHeaderTextBlock">
+                    <TextBlock Text="{Binding}"
+                               FontFamily="Segoe WP Black"
+                               FontSize="48"
+                               Margin="0,24,0,0"
+                               Foreground="{StaticResource PhoneAccentBrush}"
+                               Opacity="0.8" />
+                    <!--Foreground="#FFD90000"-->
+                </DataTemplate>
+            </Hub.Resources>
+
+            <Hub.Background>
+                <ImageBrush Stretch="UniformToFill"
+                            ImageSource="Images/pattern-wallpapers.jpg" />
+            </Hub.Background>
+
+            <HubSection x:Name="GroupedCarsSection"
+                        Header="Tous"
+                        HeaderTemplate="{StaticResource HubHeaderTextBlock}">
+                <DataTemplate>
+                    <ListView Padding="0,0,0,96"
+                              x:Name="GroupedCarsListView"
+                              ItemsSource="{Binding GroupCarsCollection}">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                                <ListView x:Name="listView"
+                                          ItemsSource="{Binding CarsCollection}"
+                                          IsItemClickEnabled="True"
+                                          SelectionMode="Single"
+                                          ItemTemplate="{StaticResource MainCarDataTemplate}">
+
+                                    <ListView.HeaderTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal"
+                                                        Margin="0,0,0,6"
+                                                        Width="341">
+                                                <Interactivity:Interaction.Behaviors>
+                                                    <Core:EventTriggerBehavior EventName="Tapped">
+                                                        <Core:InvokeCommandAction Command="{Binding MainViewModel.PinCarManifacturerCommand, Source={StaticResource Factory}}"
+                                                                                  CommandParameter="{Binding Mode=OneWay}" />
+                                                    </Core:EventTriggerBehavior>
+                                                </Interactivity:Interaction.Behaviors>
+                                                <Image Height="84"
+                                                       Width="101"
+                                                       Stretch="UniformToFill"
+                                                       Source="{Binding Manifacturer, Converter={StaticResource StringToImageUrlConverter}}" />
+
+                                                <TextBlock Text="{Binding Manifacturer}"
+                                                           FontFamily="Segoe UI Black"
+                                                           FontSize="36"
+                                                           FontWeight="SemiBold"
+                                                           Foreground="White"
+                                                           VerticalAlignment="Center"
+                                                           Margin="12,0" />
+
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.HeaderTemplate>
+
+                                </ListView>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection x:Name="FavoritSection"
+                        Header="Favoris"
+                        HeaderTemplate="{StaticResource HubHeaderTextBlock}">
+                <DataTemplate>
+                    <ListView Padding="0,0,0,96"
+                              ItemsSource="{Binding FavoritCarsCollection}"
+                              IsItemClickEnabled="True"
+                              SelectionMode="Single">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal"
+                                            Margin="0,0,0,6"
+                                            Background="White"
+                                            Width="341">
+                                    <Interactivity:Interaction.Behaviors>
+                                        <Core:EventTriggerBehavior EventName="Tapped">
+                                            <Core:InvokeCommandAction Command="{Binding MainViewModel.SelectSelectedCarCommand, Mode=OneWay, Source={StaticResource Factory}}"
+                                                                      CommandParameter="{Binding Mode=OneWay}" />
+                                            <Media:ControlStoryboardAction Storyboard="{StaticResource ShowUpRemoveDialogStoryboard}"
+                                                                           ControlStoryboardOption="Play" />
+                                        </Core:EventTriggerBehavior>
+                                    </Interactivity:Interaction.Behaviors>
+                                    <Image Source="{Binding ImageUrl}"
+                                           Height="84"
+                                           Width="160"
+                                           Stretch="UniformToFill" />
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Manifacturer}"
+                                                   FontFamily="Segoe UI Black"
+                                                   FontSize="24"
+                                                   Foreground="Black"
+                                                   Margin="12,0" />
+                                        <TextBlock Text="{Binding Model}"
+                                                   FontFamily="Segoe UI Black"
+                                                   FontSize="20"
+                                                   Margin="12,0"
+                                                   Foreground="{StaticResource PhoneAccentBrush}" />
+                                        <TextBlock Text="{Binding Price}"
+                                                   FontFamily="Segoe UI"
+                                                   FontSize="20"
+                                                   Margin="12,0"
+                                                   Opacity="0.6"
+                                                   Foreground="Black" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection x:Name="SearchSection"
+                        Header="Recherche"
+                        Visibility="Collapsed"
+                        HeaderTemplate="{StaticResource HubHeaderTextBlock}">
+                <DataTemplate>
+                    <Grid>
+
+                        <StackPanel VerticalAlignment="Top"
+                                    Orientation="Vertical">
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+
+                                <HyperlinkButton Content="prix"
+                                                 FontSize="24"
+                                                 Foreground="{StaticResource PhoneAccentBrush}">
+                                    <Interactivity:Interaction.Behaviors>
+                                        <Core:EventTriggerBehavior EventName="Click">
+                                            <Core:ChangePropertyAction TargetObject="{Binding ElementName=MainSearchSlider}"
+                                                                       PropertyName="Visibility" />
+                                            <Core:ChangePropertyAction PropertyName="Visibility"
+                                                                       TargetObject="{Binding ElementName=autoSuggestBox}">
+                                                <Core:ChangePropertyAction.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </Core:ChangePropertyAction.Value>
+                                            </Core:ChangePropertyAction>
+                                        </Core:EventTriggerBehavior>
+                                    </Interactivity:Interaction.Behaviors>
+                                </HyperlinkButton>
+
+                                <HyperlinkButton Content="modèle"
+                                                 Foreground="{StaticResource PhoneAccentBrush}"
+                                                 Margin="24,0"
+                                                 FontSize="24">
+                                    <Interactivity:Interaction.Behaviors>
+                                        <Core:EventTriggerBehavior EventName="Click">
+                                            <Core:ChangePropertyAction PropertyName="Visibility"
+                                                                       TargetObject="{Binding ElementName=autoSuggestBox}" />
+                                            <Core:ChangePropertyAction TargetObject="{Binding ElementName=MainSearchSlider}"
+                                                                       PropertyName="Visibility">
+                                                <Core:ChangePropertyAction.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </Core:ChangePropertyAction.Value>
+                                            </Core:ChangePropertyAction>
+                                        </Core:EventTriggerBehavior>
+                                    </Interactivity:Interaction.Behaviors>
+                                </HyperlinkButton>
+
+                            </StackPanel>
+
+                            <AutoSuggestBox x:Name="autoSuggestBox"
+                                            VerticalAlignment="Top"
+                                            Margin="0,0,0,0"
+                                            Text="{Binding SearchedKeyword, Mode=TwoWay}"
+                                            ItemsSource="{Binding SearchedCarsCollection, Converter={StaticResource CarsCollectionToStringCollectionConverter}}"
+                                            Visibility="Collapsed">
+                                <Interactivity:Interaction.Behaviors>
+                                    <Core:EventTriggerBehavior EventName="TextChanged">
+                                        <Core:InvokeCommandAction Command="{Binding SearchCarsByKeywordCommand, Mode=OneWay}" />
+                                    </Core:EventTriggerBehavior>
+                                </Interactivity:Interaction.Behaviors>
+                                <AutoSuggestBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}" />
+                                    </DataTemplate>
+                                </AutoSuggestBox.ItemTemplate>
+                            </AutoSuggestBox>
+
+                            <Slider Name="MainSearchSlider"
+                                    VerticalAlignment="Top"
+                                    Minimum="15000"
+                                    Maximum="400000"
+                                    Orientation="Horizontal"
+                                    Value="{Binding SearchedPrice, Mode=TwoWay}"
+                                    Background="{ThemeResource PhoneAccentBrush}"
+                                    Height="67"
+                                    LargeChange="5000"
+                                    Visibility="Collapsed">
+                                <Slider.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+											<Run Text="Prix (+/- 10%) : " />
+											<Run Text="{Binding SearchedPrice}" />
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </Slider.HeaderTemplate>
+                                <Interactivity:Interaction.Behaviors>
+                                    <Core:EventTriggerBehavior EventName="ValueChanged">
+                                        <Core:InvokeCommandAction Command="{Binding SearchCarsByPriceCommand, Mode=OneWay}" />
+                                    </Core:EventTriggerBehavior>
+                                </Interactivity:Interaction.Behaviors>
+                            </Slider>
+
+                        </StackPanel>
+
+                        <ListView Padding="0,0,0,96"
+                                  ItemsSource="{Binding SearchedCarsCollection}"
+                                  Margin="0,118,0,0"
+                                  ItemTemplate="{StaticResource MainCarDataTemplate}">
+
+                        </ListView>
+
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="Videos"
+                        HeaderTemplate="{StaticResource HubHeaderTextBlock}">
+                <DataTemplate>
+                    <ListView x:Name="listView"
+                              Padding="0,0,0,96"
+                              ItemsSource="{Binding VideosCollection}">
+
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="SelectionChanged">
+                                <Core:InvokeCommandAction Command="{Binding SelectVideoCommand, Mode=OneWay}"
+                                                          CommandParameter="{Binding SelectedItem, ElementName=listView}" />
+                            </Core:EventTriggerBehavior>
+                            <Core:EventTriggerBehavior EventName="SelectionChanged">
+                                <Core:NavigateToPageAction TargetPage="AutomobileTn.Shared.Views.VideoPlayerPage" />
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,6"
+                                      Width="336">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding MediumThumbnail}"
+                                           Width="160"
+                                           Stretch="UniformToFill"
+                                           Grid.Column="0" />
+
+                                    <TextBlock Text="{Binding Title}"
+                                               FontFamily="Segoe UI Black"
+                                               FontSize="20"
+                                               Margin="12,0"
+                                               TextWrapping="Wrap"
+                                               Width="171"
+                                               Grid.Column="1"
+                                               MaxLines="4" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="Tweets"
+                        HeaderTemplate="{StaticResource HubHeaderTextBlock}">
+                <DataTemplate>
+                    <ListView Padding="0,0,0,96"
+                              ItemsSource="{Binding TweetsCollection}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,12">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImageUrl}"
+                                           VerticalAlignment="Top" />
+                                    <StackPanel Orientation="Vertical"
+                                                Grid.Column="1">
+                                        <TextBlock Text="{Binding Text}"
+                                                   TextWrapping="Wrap"
+                                                   FontSize="16"
+                                                   Margin="12,-6,0,0" />
+                                        <!--<TextBlock Text="{Binding PublishDate, Converter={StaticResource RelativeDateTimeConverter}}"
+                                               TextWrapping="Wrap"
+                                               FontSize="16"
+                                               Opacity="0.6"
+                                               TextTrimming="WordEllipsis"
+                                               HorizontalAlignment="Right" />-->
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+        </Hub>
+
+        <Grid Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid Background="Black"
+                  Opacity="0.8" />
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="Chargement des données..."
+                           FontSize="14" />
+                <ProgressBar IsIndeterminate="True"
+                             IsEnabled="True"
+                             Margin="0,12" />
+            </StackPanel>
+        </Grid>
+
+        <Image Source="Images/automobile-logo.png"
+               Stretch="Uniform"
+               Height="48"
+               Margin="8,-24,24,0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top" />
+
+        <Grid x:Name="AddCarToFavoritDialog"
+              VerticalAlignment="Center"
+              Background="{StaticResource PhoneAccentBrush}"
+              RenderTransformOrigin="0.5,0.5"
+              Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="24">
+                <TextBlock FontSize="16"
+                           TextWrapping="Wrap">
+					<Run Text="Voulez vous ajouter " />
+					<Run Text="{Binding SelectedCar.Manifacturer}" />
+					<Run Text="" />
+					<Run Text="{Binding SelectedCar.Model}" />
+					<Run Text=" à vos favoris ?" />
+                </TextBlock>
+                <Grid Margin="0,24">
+
+                    <Button Content="Ajouter">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="Click">
+                                <Core:InvokeCommandAction Command="{Binding AddCarToFavoritListCommand, Mode=OneWay}" />
+                                <Core:ChangePropertyAction PropertyName="Visibility"
+                                                           TargetObject="{Binding ElementName=AddCarToFavoritDialog}">
+                                    <Core:ChangePropertyAction.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </Core:ChangePropertyAction.Value>
+                                </Core:ChangePropertyAction>
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </Button>
+
+                    <Button Content="Cancel"
+                            HorizontalAlignment="Right">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="Click">
+                                <!--<Core:ChangePropertyAction TargetObject="{Binding ElementName=AddCarToFavoritDialog}"
+                                                           PropertyName="Visibility">
+                                    <Core:ChangePropertyAction.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </Core:ChangePropertyAction.Value>
+
+                                </Core:ChangePropertyAction>-->
+
+                                <Media:ControlStoryboardAction ControlStoryboardOption="Play"
+                                                               Storyboard="{Binding ElementName=ShowDownStoryboard}" />
+
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </Button>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="RemoveCarFromFavoritDialog"
+              VerticalAlignment="Center"
+              Background="{StaticResource PhoneAccentBrush}"
+              RenderTransformOrigin="0.5,0.5"
+              Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="24">
+                <TextBlock FontSize="16"
+                           TextWrapping="Wrap">
+					<Run Text="Voulez vous supprimer " />
+					<Run Text="{Binding SelectedCar.Manifacturer}" />
+					<Run Text="" />
+					<Run Text="{Binding SelectedCar.Model}" />
+					<Run Text=" de vos favoris ?" />
+                </TextBlock>
+
+                <Grid Margin="0,24">
+
+                    <Button Content="supprimer">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="Click">
+                                <Core:InvokeCommandAction Command="{Binding RemoveCarFromFavoritListCommand, Mode=OneWay}" />
+                                <Core:ChangePropertyAction PropertyName="Visibility"
+                                                           TargetObject="{Binding ElementName=RemoveCarFromFavoritDialog}">
+                                    <Core:ChangePropertyAction.Value>
+                                        <Visibility>Collapsed</Visibility>
+                                    </Core:ChangePropertyAction.Value>
+                                </Core:ChangePropertyAction>
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </Button>
+
+                    <Button Content="Cancel"
+                            HorizontalAlignment="Right">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="Click">
+                                <Media:ControlStoryboardAction Storyboard="{StaticResource ShowDownRemoveDialogStoryboard}"
+                                                               ControlStoryboardOption="Play" />
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </Button>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+</Page>
