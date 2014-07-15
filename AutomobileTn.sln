@@ -11,33 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomobileTn.Windows", "Aut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomobileTn.WindowsPhone", "AutomobileTn\AutomobileTn.WindowsPhone\AutomobileTn.WindowsPhone.csproj", "{09AF6E45-7A02-491E-AC7F-A20940CD8B72}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{602B76E8-129D-43E7-A8FB-422EC6889313}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomobileTn.CodedUITests", "AutomobileTn.CodedUITests\AutomobileTn.CodedUITests.csproj", "{0D3187EB-B986-406D-9C35-038035970D94}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AutomobileTn\AutomobileTn.Shared\AutomobileTn.Shared.projitems*{9a9149f1-e5e7-4ac9-8268-e61f0d585b0f}*SharedItemsImports = 13
 		AutomobileTn\AutomobileTn.Shared\AutomobileTn.Shared.projitems*{09af6e45-7a02-491e-ac7f-a20940cd8b72}*SharedItemsImports = 4
 		AutomobileTn\AutomobileTn.Shared\AutomobileTn.Shared.projitems*{847dd4a9-0b03-41b7-a00e-eb194e2614a4}*SharedItemsImports = 4
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://houssemdellai.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AutomobileTn\\AutomobileTn.Shared\\AutomobileTn.Shared.projitems
-		SccProjectTopLevelParentUniqueName1 = AutomobileTn.sln
-		SccProjectName1 = AutomobileTn/AutomobileTn.Shared
-		SccLocalPath1 = AutomobileTn\\AutomobileTn.Shared
-		SccProjectUniqueName2 = AutomobileTn\\AutomobileTn.Shared\\AutomobileTn.Shared.shproj
-		SccProjectTopLevelParentUniqueName2 = AutomobileTn.sln
-		SccProjectName2 = AutomobileTn/AutomobileTn.Shared
-		SccLocalPath2 = AutomobileTn\\AutomobileTn.Shared
-		SccProjectUniqueName3 = AutomobileTn\\AutomobileTn.Windows\\AutomobileTn.Windows.csproj
-		SccProjectTopLevelParentUniqueName3 = AutomobileTn.sln
-		SccProjectName3 = AutomobileTn/AutomobileTn.Windows
-		SccLocalPath3 = AutomobileTn\\AutomobileTn.Windows
-		SccProjectUniqueName4 = AutomobileTn\\AutomobileTn.WindowsPhone\\AutomobileTn.WindowsPhone.csproj
-		SccProjectTopLevelParentUniqueName4 = AutomobileTn.sln
-		SccProjectName4 = AutomobileTn/AutomobileTn.WindowsPhone
-		SccLocalPath4 = AutomobileTn\\AutomobileTn.WindowsPhone
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +76,16 @@ Global
 		{09AF6E45-7A02-491E-AC7F-A20940CD8B72}.Release|x86.ActiveCfg = Release|x86
 		{09AF6E45-7A02-491E-AC7F-A20940CD8B72}.Release|x86.Build.0 = Release|x86
 		{09AF6E45-7A02-491E-AC7F-A20940CD8B72}.Release|x86.Deploy.0 = Release|x86
+		{0D3187EB-B986-406D-9C35-038035970D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Release|x64.ActiveCfg = Release|Any CPU
+		{0D3187EB-B986-406D-9C35-038035970D94}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +94,6 @@ Global
 		{9A9149F1-E5E7-4AC9-8268-E61F0D585B0F} = {BADF04A1-99AC-4CE8-A3AE-5AC308F1C16C}
 		{847DD4A9-0B03-41B7-A00E-EB194E2614A4} = {BADF04A1-99AC-4CE8-A3AE-5AC308F1C16C}
 		{09AF6E45-7A02-491E-AC7F-A20940CD8B72} = {BADF04A1-99AC-4CE8-A3AE-5AC308F1C16C}
+		{0D3187EB-B986-406D-9C35-038035970D94} = {602B76E8-129D-43E7-A8FB-422EC6889313}
 	EndGlobalSection
 EndGlobal

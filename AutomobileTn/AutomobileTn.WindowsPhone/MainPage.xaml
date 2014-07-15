@@ -200,7 +200,8 @@
                     </Core:EventTriggerBehavior>
 
                 </Interactivity:Interaction.Behaviors>
-                <Image Source="{Binding ImageUrl}"
+                <Image x:Name="image"
+                       Source="{Binding ImageUrl}"
                        Height="84"
                        Width="160"
                        Stretch="UniformToFill" />
@@ -221,12 +222,14 @@
                     </Grid>
 
                     <StackPanel Margin="12,0,0,0">
-                        <TextBlock Text="{Binding Model}"
+                        <TextBlock x:Name="textBlock"
+                                   Text="{Binding Model}"
                                    FontFamily="Segoe UI Black"
                                    FontSize="24"
                                    Margin="0,12,12,0"
                                    Foreground="{StaticResource PhoneAccentBrush}" />
-                        <TextBlock Text="{Binding Price, Converter={StaticResource IntToPriceConverter}}"
+                        <TextBlock x:Name="textBlock1"
+                                   Text="{Binding Price, Converter={StaticResource IntToPriceConverter}}"
                                    FontFamily="Segoe UI"
                                    FontSize="20"
                                    Margin="0,0"
@@ -247,10 +250,12 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Refresh"
+            <AppBarButton x:Name="appBarButton"
+                          Icon="Refresh"
                           Label="rafraichir"
                           Command="{Binding RefreshCommand}" />
-            <AppBarButton Label="rechercher"
+            <AppBarButton x:Name="appBarButton1"
+                          Label="rechercher"
                           Click="SearchAppBarButton_Click"
                           Icon="Find" />
         </CommandBar>
@@ -264,7 +269,8 @@
 
             <Hub.Resources>
                 <DataTemplate x:Key="HubHeaderTextBlock">
-                    <TextBlock Text="{Binding}"
+                    <TextBlock x:Name="textBlock"
+                               Text="{Binding}"
                                FontFamily="Segoe WP Black"
                                FontSize="48"
                                Margin="0,24,0,0"
@@ -307,12 +313,14 @@
                                                                                   CommandParameter="{Binding Mode=OneWay}" />
                                                     </Core:EventTriggerBehavior>
                                                 </Interactivity:Interaction.Behaviors>
-                                                <Image Height="84"
+                                                <Image x:Name="image"
+                                                       Height="84"
                                                        Width="101"
                                                        Stretch="UniformToFill"
                                                        Source="{Binding Manifacturer, Converter={StaticResource StringToImageUrlConverter}}" />
 
-                                                <TextBlock Text="{Binding Manifacturer}"
+                                                <TextBlock x:Name="textBlock"
+                                                           Text="{Binding Manifacturer}"
                                                            FontFamily="Segoe UI Black"
                                                            FontSize="36"
                                                            FontWeight="SemiBold"
@@ -336,17 +344,18 @@
                         Header="Favoris"
                         HeaderTemplate="{StaticResource HubHeaderTextBlock}">
                 <DataTemplate>
-                    <ListView Padding="0,0,0,96"
+                    <ListView x:Name="listView"
+                              Padding="0,0,0,96"
                               ItemsSource="{Binding FavoritCarsCollection}"
                               IsItemClickEnabled="True"
                               SelectionMode="Single">
 
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal"
-                                            Margin="0,0,0,6"
-                                            Background="White"
-                                            Width="341">
+                                <StackPanel  Orientation="Horizontal"
+                                             Margin="0,0,0,6"
+                                             Background="White"
+                                             Width="341">
                                     <Interactivity:Interaction.Behaviors>
                                         <Core:EventTriggerBehavior EventName="Tapped">
                                             <Core:InvokeCommandAction Command="{Binding MainViewModel.SelectSelectedCarCommand, Mode=OneWay, Source={StaticResource Factory}}"
@@ -355,22 +364,26 @@
                                                                            ControlStoryboardOption="Play" />
                                         </Core:EventTriggerBehavior>
                                     </Interactivity:Interaction.Behaviors>
-                                    <Image Source="{Binding ImageUrl}"
+                                    <Image x:Name="image"
+                                           Source="{Binding ImageUrl}"
                                            Height="84"
                                            Width="160"
                                            Stretch="UniformToFill" />
                                     <StackPanel>
-                                        <TextBlock Text="{Binding Manifacturer}"
+                                        <TextBlock x:Name="textBlock"
+                                                   Text="{Binding Manifacturer}"
                                                    FontFamily="Segoe UI Black"
                                                    FontSize="24"
                                                    Foreground="Black"
                                                    Margin="12,0" />
-                                        <TextBlock Text="{Binding Model}"
+                                        <TextBlock x:Name="textBlock1"
+                                                   Text="{Binding Model}"
                                                    FontFamily="Segoe UI Black"
                                                    FontSize="20"
                                                    Margin="12,0"
                                                    Foreground="{StaticResource PhoneAccentBrush}" />
-                                        <TextBlock Text="{Binding Price}"
+                                        <TextBlock x:Name="textBlock2"
+                                                   Text="{Binding Price}"
                                                    FontFamily="Segoe UI"
                                                    FontSize="20"
                                                    Margin="12,0"
@@ -447,7 +460,8 @@
                                 </Interactivity:Interaction.Behaviors>
                                 <AutoSuggestBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding}" />
+                                        <TextBlock x:Name="textBlock"
+                                                   Text="{Binding}" />
                                     </DataTemplate>
                                 </AutoSuggestBox.ItemTemplate>
                             </AutoSuggestBox>
@@ -464,7 +478,7 @@
                                     Visibility="Collapsed">
                                 <Slider.HeaderTemplate>
                                     <DataTemplate>
-                                        <TextBlock>
+                                        <TextBlock x:Name="textBlock">
 											<Run Text="Prix (+/- 10%) : " />
 											<Run Text="{Binding SearchedPrice}" />
                                         </TextBlock>
@@ -479,7 +493,8 @@
 
                         </StackPanel>
 
-                        <ListView Padding="0,0,0,96"
+                        <ListView x:Name="listView"
+                                  Padding="0,0,0,96"
                                   ItemsSource="{Binding SearchedCarsCollection}"
                                   Margin="0,118,0,0"
                                   ItemTemplate="{StaticResource MainCarDataTemplate}">
@@ -515,12 +530,14 @@
                                         <ColumnDefinition Width="2*" />
                                         <ColumnDefinition Width="3*" />
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding MediumThumbnail}"
+                                    <Image x:Name="image"
+                                           Source="{Binding MediumThumbnail}"
                                            Width="160"
                                            Stretch="UniformToFill"
                                            Grid.Column="0" />
 
-                                    <TextBlock Text="{Binding Title}"
+                                    <TextBlock x:Name="textBlock"
+                                               Text="{Binding Title}"
                                                FontFamily="Segoe UI Black"
                                                FontSize="20"
                                                Margin="12,0"
@@ -538,7 +555,8 @@
             <HubSection Header="Tweets"
                         HeaderTemplate="{StaticResource HubHeaderTextBlock}">
                 <DataTemplate>
-                    <ListView Padding="0,0,0,96"
+                    <ListView x:Name="listView"
+                              Padding="0,0,0,96"
                               ItemsSource="{Binding TweetsCollection}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -547,11 +565,13 @@
                                         <ColumnDefinition Width="1*" />
                                         <ColumnDefinition Width="4*" />
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding ImageUrl}"
+                                    <Image x:Name="image"
+                                           Source="{Binding ImageUrl}"
                                            VerticalAlignment="Top" />
                                     <StackPanel Orientation="Vertical"
                                                 Grid.Column="1">
-                                        <TextBlock Text="{Binding Text}"
+                                        <TextBlock x:Name="textBlock"
+                                                   Text="{Binding Text}"
                                                    TextWrapping="Wrap"
                                                    FontSize="16"
                                                    Margin="12,-6,0,0" />
@@ -571,20 +591,23 @@
 
         </Hub>
 
-        <Grid Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
+        <Grid Name="LoadingSplashGrid"
+              Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
             <Grid Background="Black"
                   Opacity="0.8" />
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Center">
-                <TextBlock Text="Chargement des données..."
-                           FontSize="14" />
+                <TextBlock x:Name="textBlock"
+                           Text="Chargement des données..."
+                           Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}"               FontSize="14" />
                 <ProgressBar IsIndeterminate="True"
                              IsEnabled="True"
                              Margin="0,12" />
             </StackPanel>
         </Grid>
 
-        <Image Source="Images/automobile-logo.png"
+        <Image x:Name="image"
+               Source="Images/automobile-logo.png"
                Stretch="Uniform"
                Height="48"
                Margin="8,-24,24,0"
@@ -602,7 +625,8 @@
 
             <StackPanel Orientation="Vertical"
                         Margin="24">
-                <TextBlock FontSize="16"
+                <TextBlock x:Name="textBlock1"
+                           FontSize="16"
                            TextWrapping="Wrap">
 					<Run Text="Voulez vous ajouter " />
 					<Run Text="{Binding SelectedCar.Manifacturer}" />
@@ -612,7 +636,8 @@
                 </TextBlock>
                 <Grid Margin="0,24">
 
-                    <Button Content="Ajouter">
+                    <Button x:Name="button"
+                            Content="Ajouter">
                         <Interactivity:Interaction.Behaviors>
                             <Core:EventTriggerBehavior EventName="Click">
                                 <Core:InvokeCommandAction Command="{Binding AddCarToFavoritListCommand, Mode=OneWay}" />
@@ -626,7 +651,8 @@
                         </Interactivity:Interaction.Behaviors>
                     </Button>
 
-                    <Button Content="Cancel"
+                    <Button x:Name="button1"
+                            Content="Cancel"
                             HorizontalAlignment="Right">
                         <Interactivity:Interaction.Behaviors>
                             <Core:EventTriggerBehavior EventName="Click">
@@ -660,7 +686,8 @@
 
             <StackPanel Orientation="Vertical"
                         Margin="24">
-                <TextBlock FontSize="16"
+                <TextBlock x:Name="textBlock2"
+                           FontSize="16"
                            TextWrapping="Wrap">
 					<Run Text="Voulez vous supprimer " />
 					<Run Text="{Binding SelectedCar.Manifacturer}" />
@@ -671,7 +698,8 @@
 
                 <Grid Margin="0,24">
 
-                    <Button Content="supprimer">
+                    <Button x:Name="button2"
+                            Content="supprimer">
                         <Interactivity:Interaction.Behaviors>
                             <Core:EventTriggerBehavior EventName="Click">
                                 <Core:InvokeCommandAction Command="{Binding RemoveCarFromFavoritListCommand, Mode=OneWay}" />
@@ -685,7 +713,8 @@
                         </Interactivity:Interaction.Behaviors>
                     </Button>
 
-                    <Button Content="Cancel"
+                    <Button x:Name="button3"
+                            Content="Cancel"
                             HorizontalAlignment="Right">
                         <Interactivity:Interaction.Behaviors>
                             <Core:EventTriggerBehavior EventName="Click">

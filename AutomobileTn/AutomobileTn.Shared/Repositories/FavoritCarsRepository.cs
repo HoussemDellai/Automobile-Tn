@@ -7,6 +7,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using Windows.Storage;
 using AutomobileTn.Models;
+using System.Linq;
 
 namespace AutomobileTn.Repositories
 {
@@ -48,7 +49,7 @@ namespace AutomobileTn.Repositories
 					throw new Exception("Une erreur s'est parvenue !");
 				}
 
-				if (favoritCars.Contains(car))
+                if (favoritCars.Where(existingCar => existingCar.Model == car.Model).Count() > 0)
 				{
 					throw new Exception("Ce modèle existe déjà !");
 				}
