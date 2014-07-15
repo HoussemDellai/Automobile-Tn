@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HOUSSEM</Machine>
+    <WindowsUser>Houssem Dellai</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>55039HoussemDellai.AutomobileTn</PackageIdentityName>
+    <IntermediateOutputPath>F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>2FCB89DEA33DA3B4247528BB7FB093A9E28639F6B8BD487A9831EFAD5DA8135E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>55039HoussemDellai.AutomobileTn_1.1.0.2_neutral__z6d44j4t15nqw</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>55039HoussemDellai.AutomobileTn_z6d44j4t15nqw!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>55039HoussemDellai.AutomobileTn</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=04E82B3C-EE1A-49AC-9003-17EF244297D5</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.2</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-07-12T11:09:14.465</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\AutomobileTn.Windows.exe">
+      <PackagePath>AutomobileTn.Windows.exe</PackagePath>
+      <Modified>2014-07-12T11:09:01.919</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2014-04-29T21:23:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2014-04-29T21:23:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:09.201</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:09.015</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:11.004</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\Square310x310Logo.scale-100.png">
+      <PackagePath>Assets\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:10.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\Square70x70Logo.scale-100.png">
+      <PackagePath>Assets\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:09.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:09.209</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-22T20:32:10.798</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\automobile-logo.png">
+      <PackagePath>Images\automobile-logo.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Alfa Romeo.png">
+      <PackagePath>Images\CarsManifacturers\Alfa Romeo.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Audi.png">
+      <PackagePath>Images\CarsManifacturers\Audi.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\BMW.png">
+      <PackagePath>Images\CarsManifacturers\BMW.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.561</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Chevrolet.png">
+      <PackagePath>Images\CarsManifacturers\Chevrolet.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.518</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Citroën.png">
+      <PackagePath>Images\CarsManifacturers\Citroën.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Dacia.png">
+      <PackagePath>Images\CarsManifacturers\Dacia.png</PackagePath>
+      <Modified>2014-06-22T20:32:02.951</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Fiat.png">
+      <PackagePath>Images\CarsManifacturers\Fiat.png</PackagePath>
+      <Modified>2014-06-22T20:32:03.201</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Ford.png">
+      <PackagePath>Images\CarsManifacturers\Ford.png</PackagePath>
+      <Modified>2014-06-22T20:32:03.096</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Hyundai.png">
+      <PackagePath>Images\CarsManifacturers\Hyundai.png</PackagePath>
+      <Modified>2014-06-22T20:32:03.340</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Jaguar.png">
+      <PackagePath>Images\CarsManifacturers\Jaguar.png</PackagePath>
+      <Modified>2014-06-22T20:32:03.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\KIA.png">
+      <PackagePath>Images\CarsManifacturers\KIA.png</PackagePath>
+      <Modified>2014-06-22T20:32:04.825</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Lancia.png">
+      <PackagePath>Images\CarsManifacturers\Lancia.png</PackagePath>
+      <Modified>2014-06-22T20:32:04.492</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Land Rover.png">
+      <PackagePath>Images\CarsManifacturers\Land Rover.png</PackagePath>
+      <Modified>2014-06-22T20:32:04.371</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Mahindra.png">
+      <PackagePath>Images\CarsManifacturers\Mahindra.png</PackagePath>
+      <Modified>2014-06-22T20:32:04.552</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Mazda.png">
+      <PackagePath>Images\CarsManifacturers\Mazda.png</PackagePath>
+      <Modified>2014-06-22T20:32:04.850</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Mercedes.png">
+      <PackagePath>Images\CarsManifacturers\Mercedes.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.017</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Mini.png">
+      <PackagePath>Images\CarsManifacturers\Mini.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.043</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Mitsubishi.png">
+      <PackagePath>Images\CarsManifacturers\Mitsubishi.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Nissan.png">
+      <PackagePath>Images\CarsManifacturers\Nissan.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.060</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Opel.png">
+      <PackagePath>Images\CarsManifacturers\Opel.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.282</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Peugeot.png">
+      <PackagePath>Images\CarsManifacturers\Peugeot.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.321</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Renault.png">
+      <PackagePath>Images\CarsManifacturers\Renault.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.327</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Seat.png">
+      <PackagePath>Images\CarsManifacturers\Seat.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.198</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Ssangyong.png">
+      <PackagePath>Images\CarsManifacturers\Ssangyong.png</PackagePath>
+      <Modified>2014-06-22T20:32:05.810</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Toyota.png">
+      <PackagePath>Images\CarsManifacturers\Toyota.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.596</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Volkswagen.png">
+      <PackagePath>Images\CarsManifacturers\Volkswagen.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\CarsManifacturers\Volvo.png">
+      <PackagePath>Images\CarsManifacturers\Volvo.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.140</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\Icons\basecircle.png">
+      <PackagePath>Images\Icons\basecircle.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.325</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\Icons\next.png">
+      <PackagePath>Images\Icons\next.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.379</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\Icons\play.png">
+      <PackagePath>Images\Icons\play.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.529</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\LightIcons\basecircle.png">
+      <PackagePath>Images\LightIcons\basecircle.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.585</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\LightIcons\next.png">
+      <PackagePath>Images\LightIcons\next.png</PackagePath>
+      <Modified>2014-06-22T20:32:06.660</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\LightIcons\transport.play.png">
+      <PackagePath>Images\LightIcons\transport.play.png</PackagePath>
+      <Modified>2014-06-22T20:32:08.206</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Shared\Images\pattern-wallpapers.jpg">
+      <PackagePath>Images\pattern-wallpapers.jpg</PackagePath>
+      <Modified>2014-06-22T20:32:14.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-07-12T11:09:01.213</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\Views\VideoPlayerPage.xbf">
+      <PackagePath>Views\VideoPlayerPage.xbf</PackagePath>
+      <Modified>2014-07-12T11:09:01.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-07-12T11:09:01.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\Views\VideosCollectionPage.xbf">
+      <PackagePath>Views\VideosCollectionPage.xbf</PackagePath>
+      <Modified>2014-07-12T11:09:01.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\AutomobileTn.Windows.xr.xml">
+      <PackagePath>AutomobileTn.Windows.xr.xml</PackagePath>
+      <Modified>2014-07-12T11:09:00.515</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Automobile Tn - Git\AutomobileTn\AutomobileTn\AutomobileTn.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-07-12T11:09:09.751</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
